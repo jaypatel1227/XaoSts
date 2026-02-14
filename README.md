@@ -11,10 +11,11 @@ XaoS TypeScript is a real-time fractal zoomer for the browser.
 - Run tests: `bun run test`
 - Build: `bun run build`
 
-## Notes
+## Architecture
 
-- Runtime is TypeScript-only (`/src/main.ts` entrypoint).
-- Legacy repository JavaScript files have been removed.
+- Runtime entrypoint: `src/main.ts`
+- Fractal core: `src/core/`
+- Canvas runtime: `src/runtime/`
 
 ## License
 
