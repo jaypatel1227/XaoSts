@@ -1,21 +1,26 @@
 # XaoS TypeScript
 
-XaoS TypeScript is a real-time fractal zoomer for the browser.
+XaoS TypeScript is a monorepo for a fractal core library and a browser demo app.
 
-## Run (Bun-only)
+## Workspace Layout
+
+- `packages/core`: fractal math, palette logic, and shared core types
+- `apps/web`: demo app (Vite + Canvas runtime) consuming `@xaosts/core`
+
+## Run (Bun + Turborepo)
 
 - Install dependencies: `bun install`
-- Start dev server: `bun run dev`
+- Start web demo: `bun run dev`
 - Open app: `http://localhost:5173/`
-- Typecheck: `bun run typecheck`
-- Run tests: `bun run test`
-- Build: `bun run build`
+- Typecheck all packages: `bun run typecheck`
+- Run tests across workspaces: `bun run test`
+- Run browser smoke tests only: `bun run test:smoke`
+- Build all workspaces: `bun run build`
 
-## Architecture
+Useful filtered commands:
 
-- Runtime entrypoint: `src/main.ts`
-- Fractal core: `src/core/`
-- Canvas runtime: `src/runtime/`
+- Web only build: `bun run build:web`
+- Core only tests: `bun run test:core`
 
 ## License
 

@@ -1,0 +1,21 @@
+{
+  "name": "@xaosts/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "bun run test:unit && bun run test:smoke",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:smoke": "playwright test"
+  },
+  "dependencies": {
+    "@xaosts/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

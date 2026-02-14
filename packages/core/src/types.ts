@@ -37,11 +37,15 @@ export interface FrameStats {
   incomplete: boolean;
 }
 
+export type RenderMode = "high-fidelity" | "approximation";
+
 export interface ZoomController {
   start(): void;
   stop(): void;
   resize(width: number, height: number): void;
   setFractal(config: FractalConfig): void;
+  setRenderMode(mode: RenderMode): void;
+  getRenderMode(): RenderMode;
   getState(): EngineState;
   dispose(): void;
 }

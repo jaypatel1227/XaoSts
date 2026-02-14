@@ -3,5 +3,9 @@ XaoSjs.iml
 node_modules
 dist
 .vite
+.turbo
 coverage
 *.tsbuildinfo
+**/dist
+playwright-report
+test-results

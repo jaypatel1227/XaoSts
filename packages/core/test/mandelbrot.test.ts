@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createMandelbrot } from "../src/core/fractals/mandelbrot";
+import { createMandelbrot } from "../src/fractals/mandelbrot";
 
 describe("createMandelbrot", () => {
   it("creates a standard default configuration", () => {
@@ -13,5 +13,17 @@ describe("createMandelbrot", () => {
     const fractal = createMandelbrot();
     const color = fractal.formula(0, 0);
     expect(fractal.palette.includes(color)).toBe(true);
+  });
+
+  it("returns origin color for points that do not escape", () => {
+    const fractal = createMandelbrot();
+    const color = fractal.formula(0, 0);
+    expect(color).toBe(fractal.palette[0]);
+  });
+
+  it("returns non-origin color for clearly escaping points", () => {
+    const fractal = createMandelbrot();
+    const color = fractal.formula(2, 2);
+    expect(color).not.toBe(fractal.palette[0]);
   });
 });
