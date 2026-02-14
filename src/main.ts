@@ -1,5 +1,5 @@
 import { createMandelbrot } from "./core/fractals/mandelbrot";
-import { createLegacyZoomController } from "./runtime/legacyXaosAdapter";
+import { createCanvasZoomController } from "./runtime/canvasZoomController";
 import "./style.css";
 
 const canvas = document.querySelector<HTMLCanvasElement>("#canvas");
@@ -10,7 +10,7 @@ if (!canvas) {
 }
 
 const fractal = createMandelbrot();
-const controller = createLegacyZoomController(canvas, fractal);
+const controller = createCanvasZoomController(canvas, fractal);
 controller.start();
 
 if (captureButton) {
