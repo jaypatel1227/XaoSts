@@ -1407,4 +1407,6 @@ xaos.mandelbrot = {
     palette: xaos.defaultPalette()
 };
 
-xaos.zoom(document.getElementById("canvas"), xaos.mandelbrot);
+if (!(typeof window !== "undefined" && window.__XAOS_DISABLE_AUTOBOOT__)) {
+    xaos.zoom(document.getElementById("canvas"), xaos.mandelbrot);
+}
