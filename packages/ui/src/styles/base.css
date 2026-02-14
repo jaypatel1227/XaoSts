@@ -1,0 +1,78 @@
+.fx-theme {
+  --fx-panel-bg: rgba(6, 10, 15, 0.42);
+  --fx-panel-border: rgba(186, 215, 240, 0.26);
+  --fx-control-bg: rgba(9, 16, 24, 0.5);
+  --fx-control-border: rgba(196, 223, 247, 0.3);
+  --fx-control-text: #ecf5ff;
+  --fx-accent: #86b8ff;
+  --fx-shadow: rgba(3, 8, 14, 0.5);
+  --fx-backdrop-blur: 16px;
+  --fx-radius: 14px;
+  color: var(--fx-control-text);
+}
+
+.fx-panel,
+.fx-menu {
+  border: 1px solid var(--fx-panel-border);
+  background: var(--fx-panel-bg);
+  color: var(--fx-control-text);
+  border-radius: var(--fx-radius);
+  box-shadow: 0 16px 36px -20px var(--fx-shadow);
+  backdrop-filter: blur(var(--fx-backdrop-blur));
+}
+
+.fx-panel {
+  padding: 0.8rem;
+}
+
+.fx-menu {
+  display: grid;
+  gap: 0.6rem;
+  min-width: 240px;
+  padding: 0.8rem;
+}
+
+.fx-menu__title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.fx-menu__body {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fx-button,
+.fx-select {
+  border: 1px solid var(--fx-control-border);
+  background: var(--fx-control-bg);
+  color: var(--fx-control-text);
+  border-radius: calc(var(--fx-radius) - 6px);
+  padding: 0.48rem 0.68rem;
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+
+.fx-button {
+  cursor: pointer;
+}
+
+.fx-button:hover,
+.fx-select:hover {
+  border-color: var(--fx-accent);
+}
+
+.fx-button:active {
+  transform: translateY(1px);
+}
+
+.fx-button:focus-visible,
+.fx-select:focus-visible {
+  outline: 2px solid var(--fx-accent);
+  outline-offset: 2px;
+}
+
+[data-slot="fractal-canvas"] {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

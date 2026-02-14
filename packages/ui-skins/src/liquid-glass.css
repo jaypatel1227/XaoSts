@@ -1,0 +1,26 @@
+.fx-skin-liquid-glass,
+[data-skin="liquid-glass"] {
+  --fx-panel-bg: linear-gradient(
+    155deg,
+    rgba(240, 247, 255, 0.2) 0%,
+    rgba(148, 185, 230, 0.12) 48%,
+    rgba(58, 88, 126, 0.18) 100%
+  );
+  --fx-panel-border: rgba(227, 238, 255, 0.42);
+  --fx-control-bg: rgba(230, 242, 255, 0.2);
+  --fx-control-border: rgba(235, 244, 255, 0.45);
+  --fx-control-text: #f4f9ff;
+  --fx-accent: #a4d9ff;
+  --fx-shadow: rgba(9, 20, 38, 0.52);
+}
+
+.fx-skin-liquid-glass.fx-panel,
+[data-skin="liquid-glass"].fx-panel,
+.fx-skin-liquid-glass.fx-menu,
+[data-skin="liquid-glass"].fx-menu {
+  backdrop-filter: blur(24px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.07),
+    0 20px 40px -24px rgba(8, 24, 48, 0.55);
+}
