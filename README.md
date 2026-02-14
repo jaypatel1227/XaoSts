@@ -26,3 +26,14 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with XaoS.js.  If not, see <http://www.gnu.org/licenses/>.
+
+# TypeScript Migration Bootstrap
+
+This repository now includes an incremental TypeScript + Vite setup.
+
+- Install dependencies: `bun install`
+- Start dev server: `bun run dev`
+- Open TS demo entrypoint: `http://localhost:5173/ts-demo.html`
+- Typecheck: `bun run typecheck`
+- Run tests: `bun run test`
+- Build: `bun run build`
